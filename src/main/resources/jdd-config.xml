@@ -60,10 +60,6 @@
 		<property name="nbHeuresBase" value="151.67"></property>
 		<property name="tauxBase" value="11.0984"></property>
 	</bean>
-	
-	
-
-
 
 </beans>
 
