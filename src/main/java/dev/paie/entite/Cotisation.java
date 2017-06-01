@@ -1,9 +1,11 @@
 package dev.paie.entite;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,7 +18,10 @@ public class Cotisation {
 	private String libelle;
 	private BigDecimal tauxSalarial;
 	private BigDecimal tauxPatronal;
-	
+	@ManyToMany(mappedBy="cotisationsNonImposables")
+    private List<ProfilRemuneration> impos;
+    @ManyToMany(mappedBy="cotisationsImposables")
+    private List<ProfilRemuneration> nonimpos;
 	
 	public String getCode() {
 		return code;

@@ -50,6 +50,7 @@ public class CotisationServiceJpaTest {
 		//TODO modifier une cotisation
 		newcotisation.setCode("abdel");
 		cotisationService.mettreAJour(newcotisation);
+		
 		//TODO vérifier que les modifications sont bien prises en compte via la méthode lister
 		List<Cotisation> listcotiapresmodif = cotisationService.lister();
 		for (Cotisation gr : listcotiapresmodif ) {
