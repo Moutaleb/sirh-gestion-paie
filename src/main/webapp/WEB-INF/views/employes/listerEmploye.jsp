@@ -37,7 +37,16 @@
 				</tr>
 			</c:forEach>
 			
-			<a href="<c:url value='./creer'></c:url>"
+			
+</table>
+</div>
+				<a href="<c:url value='./creer'></c:url>"
 				class="btn btn-primary">Creer employé</a>
-
+				
+				<a href="<c:url value='../bulletins/creer'></c:url>"
+				class="btn btn-primary">Creer bulletin</a>
+				
+				<a href="<c:url value='../bulletins/lister'></c:url>"
+				class="btn btn-primary">Lister bulletin</a>
+</body>
 </html>

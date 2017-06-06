@@ -64,8 +64,14 @@
 	</fieldset>
 	
 </form>
-<a href="<c:url value='./lister'></c:url>"
+				<a href="<c:url value='./lister'></c:url>"
 				class="btn btn-primary">Lister employé</a>
+				
+				<a href="<c:url value='../bulletins/creer'></c:url>"
+				class="btn btn-primary">Creer bulletin</a>
+				
+				<a href="<c:url value='../bulletins/lister'></c:url>"
+				class="btn btn-primary">Lister bulletin</a>
 </body>
 </html>
 

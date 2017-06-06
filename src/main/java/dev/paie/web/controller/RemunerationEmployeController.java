@@ -12,6 +12,7 @@ import dev.paie.entite.Entreprise;
 import dev.paie.entite.RemunerationEmploye;
 import dev.paie.repository.EntrepriseRepository;
 import dev.paie.repository.GradeRepository;
+import dev.paie.repository.PeriodeRepository;
 import dev.paie.repository.ProfilRepository;
 import dev.paie.repository.RemunerationEmployeRepository;
 
@@ -23,6 +24,7 @@ public class RemunerationEmployeController {
 	@Autowired private ProfilRepository profil;
 	@Autowired private GradeRepository grade;
 	@Autowired private RemunerationEmployeRepository remunEmploye;
+	@Autowired private PeriodeRepository periode;
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/creer")
 	public ModelAndView creerEmploye() {

@@ -16,8 +16,9 @@ public class Periode {
 	private LocalDate dateDebut;
 	private LocalDate dateFin;
 	
-	
-	
+	public Periode() {
+		super();
+	}
 	public Periode(LocalDate dateDebut, LocalDate dateFin) {
 		super();
 		this.dateDebut = dateDebut;
