@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +29,7 @@ public class BulletinController {
 	
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/creer")
+	@Secured("ROLE_ADMINISTRATEUR")
     public ModelAndView creerBulletin() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Bulletin/creerBulletinSalaire");
@@ -52,6 +54,7 @@ public class BulletinController {
     }
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/lister")
+	@Secured({"ROLE_ADMINISTRATEUR","ROLE_UTILISATEUR"})
 	public ModelAndView listerEmploye() {
 
 		ModelAndView mv = new ModelAndView();

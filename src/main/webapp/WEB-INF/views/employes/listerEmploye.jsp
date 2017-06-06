@@ -21,20 +21,24 @@
 
 	<!-- Liste des noms -->
 	<div class="table-responsive">
-		<table class="table">
+		<table class="table table-bordered">
+	
 			<tr>
 				<th>Matricule</th>
 				<th>Entreprise</th>
 				<th>Profil</th>
 				<th>Grade</th>
 			</tr>
+		
 			<c:forEach var="employe" items="${employe}">
+		
 				<tr>
 					<td>${employe.matricule}</td>
 					<td>${employe.entreprise.denomination}</td>
 					<td>${employe.profilRemuneration.code}</td>
 					<td>${employe.grade.code}</td>
 				</tr>
+			
 			</c:forEach>
 			
 			
