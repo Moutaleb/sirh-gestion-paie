@@ -8,14 +8,14 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-<form class="form-horizontal">
+<form class="form-horizontal" method="post">
 	<fieldset>
 	<h1> Ajouter Un Employé </h1>
 		<!-- Text input-->
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="textinput">Matricule</label>
 			<div class="col-md-4">
-				<input id="textinput" name="textinput" type="text"
+				<input id="matricule" name="matricule" type="text"
 					placeholder="" class="form-control input-md">
 			</div>
 		</div>
@@ -23,9 +23,9 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="selectbasic">Entreprise</label>
 			<div class="col-md-4">
-				<select id="selectbasic" name="selectbasic" class="form-control">
+				<select id="entreprise" name="entreprise" class="form-control">
                         <c:forEach var="entreprise" items="${entreprise}">
-                            <option value="${entreprise.denomination}">${entreprise.denomination}</option>
+                            <option value="${entreprise.id}">${entreprise.denomination}</option>
                         </c:forEach>
                         </select>
 			</div>
@@ -34,9 +34,9 @@
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="selectbasic">Profil</label>
 			<div class="col-md-4">
-				<select id="selectbasic" name="selectbasic" class="form-control">
+				<select id="profil" name="profil" class="form-control">
                         <c:forEach var="profil" items="${profil}">
-                            <option value="${profil.code}">${profil.code}</option>
+                            <option value="${profil.id}">${profil.code}</option>
                         </c:forEach>
                     </select>
 			</div>
@@ -46,9 +46,9 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="selectbasic">Grade</label>
                 <div class="col-md-4">
-                    <select id="selectbasic" name="selectbasic" class="form-control">
+                    <select id="grade" name="grade" class="form-control">
                         <c:forEach var="grade" items="${grade}">
-                            <option value="${grade.code}">${grade.code}</option>
+                            <option value="${grade.id}">${grade.code}</option>
                         </c:forEach>
                     </select>
                 </div>
@@ -62,7 +62,10 @@
 				</div>
 				</div>
 	</fieldset>
+	
 </form>
+<a href="<c:url value='./lister'></c:url>"
+				class="btn btn-primary">Lister employé</a>
 </body>
 </html>
 
