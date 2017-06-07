@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -52,6 +53,7 @@
 		</div>
 		
 	</fieldset>
+	<sec:csrfInput/>
 </form>
 				<a href="<c:url value='../employes/creer'></c:url>"
 				class="btn btn-primary">Creer employé</a>
